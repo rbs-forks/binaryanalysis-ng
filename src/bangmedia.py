@@ -35,7 +35,10 @@ import os
 import binascii
 import string
 import math
-import lzma
+try:
+    import lzma
+except:
+    from backports import lzma
 import zlib
 import re
 import datetime
