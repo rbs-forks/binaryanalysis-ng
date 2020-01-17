@@ -743,7 +743,7 @@ def processfile(dbconn, dbcursor, scanenvironment):
                     # TODO: this is vulnerable to a race condition, replace with EAFP pattern
                     if not jsonfilename.exists():
                         jsonout = jsonfilename.open('w')
-                        json.dump(resultout, jsonout, indent=4)
+                        json.dump(str(resultout), jsonout, indent=4)
                         jsonout.close()
             else:
                 scanjob.fileresult.labels.add('duplicate')

@@ -87,7 +87,7 @@ class Unpacker:
         '''Remove the unpacking directory'''
         if not (self.unpackroot / self.dataunpackdirectory).exists():
             return
-        os.rmdir(os.path.join(self.unpackroot, self.dataunpackdirectory))
+        shutil.rmtree(os.path.join(self.unpackroot, self.dataunpackdirectory))
 
     def remove_data_unpack_directory_tree(self):
         '''Remove the unpacking directory, including any

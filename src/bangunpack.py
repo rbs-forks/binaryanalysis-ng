@@ -39,7 +39,10 @@ import struct
 import collections
 import math
 import tarfile
-import lzma
+try:
+    import lzma
+except:
+    from backports import lzma
 import zlib
 import zipfile
 import bz2

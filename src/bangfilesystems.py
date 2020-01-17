@@ -37,7 +37,10 @@ import binascii
 import tempfile
 import collections
 import math
-import lzma
+try:
+    import lzma
+except:
+    from backports import lzma
 import zlib
 import gzip
 import stat
